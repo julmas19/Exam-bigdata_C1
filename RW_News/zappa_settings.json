@@ -1,0 +1,26 @@
+{
+    "dev": {
+        "app_function": "papers.f1",
+        "profile_name": "default",
+        "project_name": "lambda3",
+        "runtime": "python3.8",
+	"keep_warm": false,
+        "aws_region": "us-east-1",
+        "s3_bucket": "zappa-q6gzl41gj",
+        "events": [{
+            "function": "papers.f1",
+            "event_source": {
+                  "arn":  "arn:aws:s3:::julianbucket24",
+                  "events": [
+                    "s3:ObjectCreated:*" // Supported event types: http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#supported-notification-event-types
+                  ]
+               }
+            }],
+
+    }
+
+}
+
+
+
+	
