@@ -1,0 +1,11 @@
+{
+    "dev": {
+        "app_function": "app.app",
+        "profile_name": "default",
+        "project_name": "ubuntu",
+        "runtime": "python3.8",
+	"keep_warm": false,
+ 	"aws_region": "us-east-1",
+        "s3_bucket": "zappa-wt96wgo99"
+    }
+}
