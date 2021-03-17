@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "app_function": "app2.f1",
+        "profile_name": "default",
+        "project_name": "lambda2",
+        "runtime": "python3.8",
+	"keep_warm": false,
+ 	"aws_region": "us-east-1",
+        "s3_bucket": "zappa-wt96wgo99",
+	"events": [{
+            "function": "app2.f1",
+            "event_source": {
+                  "arn":  "arn:aws:s3:::julianbucket23",
+                  "events": [
+                    "s3:ObjectCreated:*" // Supported event types: http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#supported-notification-event-types
+                  ]
+               }
+            }],
+	
+    }
+	
+}
+
